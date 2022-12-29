@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --Transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray-bhb: hsl(0, 0%, 95%);
+}
+
+@font-face {
+    font-family: 'BigShoulderDisplay';
+    src: url('BigShouldersDisplay-VariableFont_wght.ttf') format('truetype');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'LexendDeca';
+    src: url('LexendDeca-VariableFont_wght.ttf') format('truetype');
+    font-weight: 400;
+}
+
+body {
+    font-size: 15px;
+    box-sizing: border-box;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Very-light-gray-bhb);
+}
+
+p {
+    font-family: 'LexendDeca';
+    color: var(--Transparent-white-paragraphs);
+}
+
+h1 {
+    color: var(--Very-light-gray-bhb);
+    font-family: 'BigShoulderDisplay';
+}
+
+.container {
+    width: 90vw;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    width: 250px;
+    height: clamp(300px, 40vw, 400px); /* make height smaller when on mobile */
+    padding: 40px;
+    position: relative;
+}
+
+.text h1 {
+    margin: 25px 0;
+}
+
+.text p {
+    line-height: 1.5rem;
+}
+
+.one {
+    background-color: var(--Bright-orange);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.two {
+    background-color: var(--Dark-cyan);
+}
+
+.three {
+    background-color: var(--Very-dark-cyan);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.btn {
+    width: 100%;
+}
+
+.btn button {
+    width: 50%;
+    height: 2.7rem;
+    margin-top: 2rem;
+    position: absolute;
+    bottom: 40px;
+    border: 2px solid var(--Very-light-gray-bhb);
+    border-radius: 2rem;
+    background-color: var(--Very-light-gray-bhb);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.one .btn button{
+    color: var(--Bright-orange);
+}
+
+.two .btn button {
+    color: var(--Dark-cyan);
+}
+
+.three .btn button {
+    color: var(--Very-dark-cyan);
+}
+
+.btn button:hover {
+    background-color: transparent;
+    color: var(--Very-light-gray-bhb);
+}
+
+@media screen and (min-width: 733px) {
+    .one {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 10px;
+    }
+    .two {
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .two  {
+        border-radius: 0;
+    }
+
+    .three {
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0;
+    }
+}
