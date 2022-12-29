@@ -90,6 +90,7 @@ h1 {
     width: 50%;
     height: 2.7rem;
     margin-top: 2rem;
+    font-family: 'LexendDeca';
     position: absolute;
     bottom: 40px;
     border: 2px solid var(--Very-light-gray-bhb);
